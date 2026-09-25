@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Portfolify — Soksan Sou</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="output.css">
+<link rel="stylesheet" href="css/style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"></script>
+</head>
+<body class="bg-[#F5F6FB] text-ink">
+
+<!-- Header -->
+
+<header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-silver/40" style="padding-top:env(safe-area-inset-top,0px)">
+  <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+    <a href="index.html" class="font-bold text-lg">Portfolify</a>
+    <nav class="hidden md:flex gap-10 text-sm font-medium text-granite">
+      <a href="index.html" class="navlink active">Home</a>
+      <a href="about.html" class="navlink hover:text-crimson transition-colors">About</a>
+      <a href="skills.html" class="navlink hover:text-crimson transition-colors">Skills</a>
+      <a href="projects.html" class="navlink hover:text-crimson transition-colors">Projects</a>
+      <a href="contact.html" class="navlink hover:text-crimson transition-colors">Contact</a>
+    </nav>
+    <div class="flex items-center gap-3">
+      <a href="contact.html" class="hidden sm:inline-block text-crimson font-semibold text-sm hover:text-darkcrimson">Get in Touch</a>
+      <div class="w-9 h-9 rounded-full bg-gradient-to-br from-crimson to-maroon"><img class="rounded-full w-9 h-9" src="/pictures/photo_2026-01-25_16-31-24.jpg" alt=""></div>
+      <button id="menuBtn" class="md:hidden w-8 h-8 flex flex-col justify-center gap-1"><span class="block w-6 h-0.5 bg-ink"></span><span class="block w-6 h-0.5 bg-ink"></span></button>
+    </div>
+  </div>
+  <div id="mobileMenu" class="md:hidden hidden flex-col gap-1 px-6 py-3 border-t border-silver/40 text-sm font-medium text-granite">
+    <a href="index.html" class="navlink active py-2">Home</a>
+    <a href="about.html" class="navlink py-2">About</a>
+    <a href="skills.html" class="navlink py-2">Skills</a>
+    <a href="projects.html" class="navlink py-2">Projects</a>
+    <a href="contact.html" class="navlink py-2">Contact</a>
+  </div>
+</header>
+
+
+<script src="js/main.js"></script>
+</body>
+</html>
