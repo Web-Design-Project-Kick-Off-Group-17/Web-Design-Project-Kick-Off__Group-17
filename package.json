@@ -1,0 +1,25 @@
+{
+  "name": "web-design-project-kick-off__group-17",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Web-Design-Project-Kick-Off-Group-17/Web-Design-Project-Kick-Off__Group-17.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Web-Design-Project-Kick-Off-Group-17/Web-Design-Project-Kick-Off__Group-17/issues"
+  },
+  "homepage": "https://github.com/Web-Design-Project-Kick-Off-Group-17/Web-Design-Project-Kick-Off__Group-17#readme",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.3.3",
+    "tailwindcss": "^4.3.3"
+  }
+}
