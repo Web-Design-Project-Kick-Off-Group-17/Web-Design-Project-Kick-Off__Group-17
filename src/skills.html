@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Skills — Portfolify</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="output.css">
+<link rel="stylesheet" href="css/style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"></script>
+</head>
+<body class="bg-[#F5F6FB] text-ink">
+
+<header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-silver/40" style="padding-top:env(safe-area-inset-top,0px)">
+  <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+    <a href="index.html" class="font-bold text-lg">Portfolify</a>
+    <nav class="hidden md:flex gap-10 text-sm font-medium text-granite">
+      <a href="index.html" class="navlink hover:text-crimson transition-colors">Home</a>
+      <a href="about.html" class="navlink hover:text-crimson transition-colors">About</a>
+      <a href="skills.html" class="navlink active">Skills</a>
+      <a href="projects.html" class="navlink hover:text-crimson transition-colors">Projects</a>
+      <a href="contact.html" class="navlink hover:text-crimson transition-colors">Contact</a>
+    </nav>
+    <div class="flex items-center gap-3">
+      <a href="contact.html" class="hidden sm:inline-block text-crimson font-semibold text-sm hover:text-darkcrimson">Get in Touch</a>
+      <img class="w-9 h-9 rounded-full bg-gradient-to-br from-crimson to-maroon" src="pictures/photo_2026-01-25_16-31-24.jpg"></img>
+      <button id="menuBtn" class="md:hidden w-8 h-8 flex flex-col justify-center gap-1"><span class="block w-6 h-0.5 bg-ink"></span><span class="block w-6 h-0.5 bg-ink"></span></button>
+    </div>
+  </div>
+  <div id="mobileMenu" class="md:hidden hidden flex-col gap-1 px-6 py-3 border-t border-silver/40 text-sm font-medium text-granite">
+    <a href="index.html" class="navlink py-2">Home</a>
+    <a href="about.html" class="navlink py-2">About</a>
+    <a href="skills.html" class="navlink active py-2">Skills</a>
+    <a href="projects.html" class="navlink py-2">Projects</a>
+    <a href="contact.html" class="navlink py-2">Contact</a>
+  </div>
+</header>
+
+<main class="max-w-6xl mx-auto px-6">
+  <div class="pt-10 flex flex-wrap justify-between items-start gap-3 mb-8">
+    <div><p class="text-[11px] font-semibold text-crimson uppercase tracking-wide mb-1">Active Capabilities</p>
+      <h1 class="text-3xl md:text-4xl font-bold mb-2">Skills &amp; Competencies</h1>
+      <p class="text-sm text-granite max-w-lg">Technical stack, methodologies &amp; learning roadmap curated for high-impact front-end development.</p></div>
+    <span class="text-[11px] font-semibold bg-lavtint text-slate px-3 py-1.5 rounded-full whitespace-nowrap"><span class="inline-block w-2 h-2 rounded-full bg-irish mr-1"></span>Available for Hire — Internship 2026</span>
+  </div>
+
+  <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-5 mb-8" id="skillStats"></div>
+
+  <div class="grid md:grid-cols-2 gap-6 mb-10">
+    <div class="bg-white border border-silver/40 rounded-2xl p-6 shadow-sm">
+      <p class="text-[11px] font-semibold text-crimson uppercase tracking-wide mb-1">Evolution Plan</p>
+      <h2 class="font-bold text-lg mb-4">Learning Roadmap (2026–2027)</h2>
+      <div id="roadmap" class="space-y-4"></div>
+    </div>
+    <div class="bg-white border border-silver/40 rounded-2xl p-6 shadow-sm">
+      <p class="text-[11px] font-semibold text-crimson uppercase tracking-wide mb-1">Collaborative Value</p>
+      <h2 class="font-bold text-lg mb-4">Soft Skills &amp; Working Style</h2>
+      <div id="softskills" class="grid grid-cols-2 gap-3"></div>
+    </div>
+  </div>
+
+  <div class="bg-crimson text-white rounded-2xl p-9 mb-14 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+    <div><h2 class="text-2xl md:text-3xl font-bold mb-2">Ready to see these skills in actual shipped code?</h2>
+    <p class="text-white/80 text-sm max-w-md">Explore live deployments, repository commits, design implementations, and case study retrospectives.</p></div>
+    <a href="projects.html" class="bg-white text-crimson hover:bg-lavtint transition-colors px-6 py-3 rounded-full font-semibold text-sm whitespace-nowrap">See Skills in Projects →</a>
+  </div>
+</main>
+
+<footer class="bg-ink text-white/60 mt-8">
+  <div class="max-w-6xl mx-auto px-6 py-14 grid sm:grid-cols-2 md:grid-cols-4 gap-10 text-sm">
+    <div>
+      <p class="text-white font-bold text-lg mb-3">Portfolio<span class="text-crimson">fy</span></p>
+      <p class="text-xs leading-relaxed mb-4">Curated student engineering portfolio showcasing practical web platforms, UI architecture, and modular solutions.</p>
+      <div class="flex flex-wrap gap-2">
+        <span class="text-[10px] bg-white/10 px-2 py-1 rounded-md">HTML5</span>
+        <span class="text-[10px] bg-white/10 px-2 py-1 rounded-md">Tailwind CSS</span>
+        <span class="text-[10px] bg-white/10 px-2 py-1 rounded-md">JavaScript</span>
+      </div>
+    </div>
+    <div>
+      <p class="text-white font-semibold mb-3">Quick Navigation</p>
+      <ul class="space-y-2 text-xs">
+        <li><a href="index.html" class="hover:text-crimson">Home Overview</a></li>
+        <li><a href="about.html" class="hover:text-crimson">Academic Background</a></li>
+        <li><a href="skills.html" class="hover:text-crimson">Technical Competencies</a></li>
+        <li><a href="projects.html" class="hover:text-crimson">Selected Works</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="text-white font-semibold mb-3">Connect</p>
+      <ul class="space-y-2 text-xs">
+        <li><i class="fa-brands fa-github mr-1"></i>GitHub Repository</li>
+        <li><i class="fa-brands fa-linkedin mr-1"></i>LinkedIn Profile</li>
+        <li><i class="fa-brands fa-telegram mr-1"></i>Telegram Channel</li>
+        <li><i class="fa-solid fa-envelope mr-1"></i>Direct Inquiries</li>
+      </ul>
+    </div>
+    <div>
+      <p class="text-white font-semibold mb-3">Capstone &amp; Credentials</p>
+      <p class="text-xs mb-3">Computer Science and Web Development Capstone Project, evaluated under academic discovery standards.</p>
+      <div class="bg-white/10 rounded-xl px-3 py-2 text-xs"><span class="text-white font-medium">Student Candidate</span><br>Soksan Sou — Finalist Portfolio</div>
+    </div>
+  </div>
+  <div class="border-t border-white/10 py-5 text-[11px] text-white/40 max-w-6xl mx-auto px-6 flex flex-col sm:flex-row justify-between gap-2">
+    <span>© 2026 Portfolify by Soksan Sou. Built for professional and academic recruitment.</span>
+    <span class="flex gap-4"><a href="#" class="hover:text-white">Privacy Policy</a><a href="#" class="hover:text-white">Terms of Service</a><a href="#" class="hover:text-white">Contact Office</a></span>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
