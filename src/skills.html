@@ -25,7 +25,7 @@
     </nav>
     <div class="flex items-center gap-3">
       <a href="contact.html" class="hidden sm:inline-block text-crimson font-semibold text-sm hover:text-darkcrimson">Get in Touch</a>
-      <img class="w-9 h-9 rounded-full bg-gradient-to-br from-crimson to-maroon" src="pictures/photo_2026-01-25_16-31-24.jpg"></img>
+      <div class="w-9 h-9 rounded-full bg-gradient-to-br from-crimson to-maroon"></div>
       <button id="menuBtn" class="md:hidden w-8 h-8 flex flex-col justify-center gap-1"><span class="block w-6 h-0.5 bg-ink"></span><span class="block w-6 h-0.5 bg-ink"></span></button>
     </div>
   </div>
@@ -37,3 +37,37 @@
     <a href="contact.html" class="navlink py-2">Contact</a>
   </div>
 </header>
+
+<main class="max-w-6xl mx-auto px-6">
+  <div class="pt-10 flex flex-wrap justify-between items-start gap-3 mb-8">
+    <div><p class="text-[11px] font-semibold text-crimson uppercase tracking-wide mb-1">Active Capabilities</p>
+      <h1 class="text-3xl md:text-4xl font-bold mb-2">Skills &amp; Competencies</h1>
+      <p class="text-sm text-granite max-w-lg">Technical stack, methodologies &amp; learning roadmap curated for high-impact front-end development.</p></div>
+    <span class="text-[11px] font-semibold bg-lavtint text-slate px-3 py-1.5 rounded-full whitespace-nowrap"><span class="inline-block w-2 h-2 rounded-full bg-irish mr-1"></span>Available for Hire — Internship 2026</span>
+  </div>
+
+  <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-5 mb-8" id="skillStats"></div>
+
+  <div class="grid md:grid-cols-2 gap-6 mb-10">
+    <div class="bg-white border border-silver/40 rounded-2xl p-6 shadow-sm">
+      <p class="text-[11px] font-semibold text-crimson uppercase tracking-wide mb-1">Evolution Plan</p>
+      <h2 class="font-bold text-lg mb-4">Learning Roadmap (2026–2027)</h2>
+      <div id="roadmap" class="space-y-4"></div>
+    </div>
+    <div class="bg-white border border-silver/40 rounded-2xl p-6 shadow-sm">
+      <p class="text-[11px] font-semibold text-crimson uppercase tracking-wide mb-1">Collaborative Value</p>
+      <h2 class="font-bold text-lg mb-4">Soft Skills &amp; Working Style</h2>
+      <div id="softskills" class="grid grid-cols-2 gap-3"></div>
+    </div>
+  </div>
+
+  <div class="bg-crimson text-white rounded-2xl p-9 mb-14 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+    <div><h2 class="text-2xl md:text-3xl font-bold mb-2">Ready to see these skills in actual shipped code?</h2>
+    <p class="text-white/80 text-sm max-w-md">Explore live deployments, repository commits, design implementations, and case study retrospectives.</p></div>
+    <a href="projects.html" class="bg-white text-crimson hover:bg-lavtint transition-colors px-6 py-3 rounded-full font-semibold text-sm whitespace-nowrap">See Skills in Projects →</a>
+  </div>
+</main>
+
+<script src="js/main.js"></script>
+</body>
+</html>
