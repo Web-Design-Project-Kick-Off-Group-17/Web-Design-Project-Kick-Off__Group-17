@@ -1,5 +1,7 @@
 :root { padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px); }
-body { font-family: 'Poppins', sans-serif; }
+body {
+  font-family: 'Poppins', 'Battambang', sans-serif;
+}
 
 .navlink { position: relative; }
 .navlink.active { color: #CE2F5A; }
@@ -12,3 +14,62 @@ body { font-family: 'Poppins', sans-serif; }
 
 .fade { opacity: 0; transform: translateY(14px); transition: opacity .5s ease, transform .5s ease; }
 .fade.in { opacity: 1; transform: translateY(0); }
+.lang-dropdown {
+  position: relative;
+  display: inline-block;
+  font-family: sans-serif;
+}
+
+.lang-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.flag-icon {
+  width: 22px;
+  height: 16px;
+  object-fit: cover;
+  border-radius: 2px;
+}
+
+.lang-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 6px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  min-width: 120px;
+  overflow: hidden;
+  z-index: 10;
+}
+
+.lang-menu.hidden {
+  display: none;
+}
+
+.lang-menu button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  text-align: left;
+  transition: background-color 0.2s;
+}
+
+.lang-menu button:hover {
+  background-color: #f3f4f6;
+}

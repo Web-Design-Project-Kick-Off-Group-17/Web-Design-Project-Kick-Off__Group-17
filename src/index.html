@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Portfolify — Soksan Sou</title>
+  <title>Portfolify — Sambath Y</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -22,15 +22,41 @@
     <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
       <a href="index.html" class="font-bold text-lg">Portfolify</a>
       <nav class="hidden md:flex gap-10 text-sm font-medium text-granite">
-        <a href="index.html" class="navlink active">Home</a>
-        <a href="about.html" class="navlink hover:text-crimson transition-colors">About</a>
-        <a href="skills.html" class="navlink hover:text-crimson transition-colors">Skills</a>
-        <a href="projects.html" class="navlink hover:text-crimson transition-colors">Projects</a>
-        <a href="contact.html" class="navlink hover:text-crimson transition-colors">Contact</a>
+        <a href="index.html" data-i18n="nav_home" class="navlink active">Home</a>
+        <a href="about.html" data-i18n="nav_about" class="navlink hover:text-crimson transition-colors">About</a>
+        <a href="skills.html" data-i18n="nav_skills" class="navlink hover:text-crimson transition-colors">Skills</a>
+        <a href="projects.html" data-i18n="nav_projects"
+          class="navlink hover:text-crimson transition-colors">Projects</a>
+        <a href="contact.html" data-i18n="nav_contact" class="navlink hover:text-crimson transition-colors">Contact</a>
+        <div class="lang-dropdown">
+
+          <!-- Selected Language Button -->
+
+          <button id="lang-btn" class="lang-btn" onclick="toggleDropdown()">
+            <img id="current-flag" src="https://flagcdn.com/w40/gb.png" alt="Flag" class="flag-icon" />
+            <span id="current-lang">EN</span>
+            <span class="arrow">▼</span>
+          </button>
+
+          <!-- Dropdown Options -->
+
+          <div id="lang-menu" class="lang-menu hidden">
+            <button onclick="changeLanguage('en', 'EN', 'https://flagcdn.com/w40/gb.png')">
+              <img src="https://flagcdn.com/w40/gb.png" alt="English" class="flag-icon" />
+              <span>English</span>
+            </button>
+            <button onclick="changeLanguage('km', 'ខ្មែរ', 'https://flagcdn.com/w40/kh.png')">
+              <img src="https://flagcdn.com/w40/kh.png" alt="Khmer" class="flag-icon" />
+              <span>ខ្មែរ</span>
+            </button>
+          </div>
+        </div>
       </nav>
+
       <div class="flex items-center gap-3">
-        <a href="contact.html"
+        <a href="contact.html" data-i18n="get_in_touch"
           class="hidden sm:inline-block text-crimson font-semibold text-sm hover:text-darkcrimson">Get in Touch</a>
+        
         <div class="w-9 h-9 rounded-full bg-gradient-to-br from-crimson to-maroon"><img class="rounded-full w-9 h-9"
             src="picture/photo_2026-09-25_11-21-27.jpg" alt="Sambath Y"></div>
         <button id="menuBtn" class="md:hidden w-8 h-8 flex flex-col justify-center gap-1"><span
@@ -39,11 +65,11 @@
     </div>
     <div id="mobileMenu"
       class="md:hidden hidden flex-col gap-1 px-6 py-3 border-t border-silver/40 text-sm font-medium text-granite">
-      <a href="index.html" class="navlink active py-2">Home</a>
-      <a href="about.html" class="navlink py-2">About</a>
-      <a href="skills.html" class="navlink py-2">Skills</a>
-      <a href="projects.html" class="navlink py-2">Projects</a>
-      <a href="contact.html" class="navlink py-2">Contact</a>
+      <a href="index.html" data-i18n="nav_home" class="navlink active py-2">Home</a>
+      <a href="about.html" data-i18n="nav_about" class="navlink py-2">About</a>
+      <a href="skills.html" data-i18n="nav_skills" class="navlink py-2">Skills</a>
+      <a href="projects.html" data-i18n="nav_projects" class="navlink py-2">Projects</a>
+      <a href="contact.html" data-i18n="nav_contact" class="navlink py-2">Contact</a>
     </div>
   </header>
 
@@ -52,19 +78,21 @@
     <!-- Home -->
 
     <div class="pt-16 pb-10 text-center max-w-2xl mx-auto">
-      <span
+      <span data-i18n="hero_role"
         class="inline-block text-[11px] font-semibold uppercase tracking-wide bg-lavtint text-slate px-3 py-1.5 rounded-full mb-5">Senior
         Web Development · CS Engineer</span>
-      <h1 class="text-[34px] md:text-[48px] font-extrabold leading-tight">Building Modern <span class="text-crimson">Web
+      <h1 data-i18n="build_modern" class="text-[34px] md:text-[48px] font-extrabold leading-tight">Building Modern web Experiencess<span data-i18n="hero_role" class="text-crimson">Web
           Experiences</span> with Code &amp; Passion.</h1>
-      <p class="mt-5 text-granite text-[15px] leading-relaxed">I am a passionate Web Development student who enjoys
+      <p data-i18n="hero_desc" class="mt-5 text-granite text-[15px] leading-relaxed">I am a passionate Web Development student who enjoys
         learning new technologies, building accessible websites, and engineering scalable technical skills. Focused on
         user-first digital engineering and clean modular software architecture.</p>
       <div class="mt-7 flex flex-wrap justify-center gap-4">
         <a href="projects.html"
+                data-i18n="view_projects"
           class="bg-crimson hover:bg-darkcrimson transition-colors text-white text-sm font-semibold px-6 py-3 rounded-full">View
           My Projects <i class="fa-solid fa-arrow-right ml-1"></i></a>
         <a href="contact.html"
+          data-i18n="contact_me"
           class="border border-silver hover:border-crimson hover:text-crimson transition-colors text-sm font-semibold px-6 py-3 rounded-full">Contact
           Me</a>
       </div>
@@ -80,8 +108,8 @@
     <div class="bg-white border border-silver/40 rounded-2xl p-7 mb-12 shadow-sm fade">
       <div class="flex justify-between items-start mb-6">
         <div>
-          <p class="text-[11px] font-semibold text-crimson uppercase tracking-wide mb-1">Technical Proficiency</p>
-          <h2 class="text-xl font-bold">Core Engineering Stack</h2>
+          <p class="text-[11px] font-semibold text-crimson uppercase tracking-wide mb-1" data-i18n="technical_Proficiency">Technical Proficiency</p>
+          <h2  class="text-xl font-bold" data-i18n="core_engineering_stack">Core Engineering Stack</h2>
         </div>
         <span class="text-xs text-granite">Updated 2026</span>
       </div>
@@ -93,10 +121,10 @@
     <div class="mb-10">
       <div class="flex flex-wrap justify-between items-end gap-3 mb-6 fade">
         <div>
-          <p class="text-[11px] font-semibold text-crimson uppercase tracking-wide mb-1">Selected Work</p>
-          <h2 class="text-2xl font-bold">Featured Engineering Projects</h2>
+          <p class="text-[11px] font-semibold text-crimson uppercase tracking-wide mb-1" data-i18n="selected_work">Selected Work</p>
+          <h2 class="text-2xl font-bold" data-i18n="featured_projects">Featured Engineering Projects</h2>
         </div>
-        <a href="projects.html" class="text-crimson text-sm font-semibold hover:text-darkcrimson">Explore All Projects
+        <a href="projects.html" class="text-crimson text-sm font-semibold hover:text-darkcrimson" data-i18n="explore_projects">Explore All Projects
           →</a>
       </div>
       <div id="homeProjects" class="grid md:grid-cols-3 gap-6 fade"></div>
@@ -106,59 +134,84 @@
       class="bg-ink text-white rounded-2xl p-9 mb-14 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 fade">
       <div>
         <span
+          data-i18n="Open_for_Internships"
           class="inline-block text-[10px] font-semibold uppercase tracking-wide bg-white/10 px-3 py-1 rounded-full mb-3">Open
-          for Summer Internship 2027</span>
-        <h2 class="text-2xl md:text-3xl font-bold mb-2">Let's collaborate on your next project.</h2>
-        <p class="text-white/60 text-sm max-w-md">I'm actively seeking junior frontend engineering roles, web
+          for Internship 2027</span>
+        <h2 data-i18n="let_colaborate" class="text-2xl md:text-3xl font-bold mb-2">Let's collaborate on your next project.</h2>
+        <p class="text-white/60 text-sm max-w-md" data-i18n="internship_desc">I'm actively seeking junior frontend engineering roles, web
           development internships, and open collaborative engineering opportunities.</p>
       </div>
       <a href="contact.html"
+        data-i18n="get_in_touch"
         class="bg-crimson hover:bg-darkcrimson transition-colors px-6 py-3 rounded-full font-semibold text-sm whitespace-nowrap">Get
         in Touch</a>
     </div>
   </main>
+
+  
   <footer class="bg-ink text-white/60 mt-8">
-  <div class="max-w-6xl mx-auto px-6 py-14 grid sm:grid-cols-2 md:grid-cols-4 gap-10 text-sm">
-    <div>
-      <p class="text-white font-bold text-lg mb-3">Portfolio<span class="text-crimson">fy</span></p>
-      <p class="text-xs leading-relaxed mb-4">Curated student engineering portfolio showcasing practical web platforms, UI architecture, and modular solutions.</p>
-      <div class="flex flex-wrap gap-2">
-        <span class="text-[10px] bg-white/10 px-2 py-1 rounded-md">HTML5</span>
-        <span class="text-[10px] bg-white/10 px-2 py-1 rounded-md">Tailwind CSS</span>
-        <span class="text-[10px] bg-white/10 px-2 py-1 rounded-md">JavaScript</span>
+    <div class="max-w-6xl mx-auto px-6 py-14 grid sm:grid-cols-2 md:grid-cols-4 gap-10 text-sm">
+      <div>
+        <p class="text-white font-bold text-lg mb-3">Portfolio<span class="text-crimson">fy</span></p>
+        <p class="text-xs leading-relaxed mb-4">Curated student engineering portfolio showcasing practical web
+          platforms, UI architecture, and modular solutions.</p>
+        <div class="flex flex-wrap gap-2">
+          <span class="text-[10px] bg-white/10 px-2 py-1 rounded-md">HTML5</span>
+          <span class="text-[10px] bg-white/10 px-2 py-1 rounded-md">Tailwind CSS</span>
+          <span class="text-[10px] bg-white/10 px-2 py-1 rounded-md">JavaScript</span>
+        </div>
+      </div>
+      <div>
+        <p class="text-white font-semibold mb-3">Quick Navigation</p>
+        <ul class="space-y-2 text-xs">
+          <li><a href="index.html" class="hover:text-crimson">Home Overview</a></li>
+          <li><a href="about.html" class="hover:text-crimson">Academic Background</a></li>
+          <li><a href="skills.html" class="hover:text-crimson">Technical Competencies</a></li>
+          <li><a href="projects.html" class="hover:text-crimson">Selected Works</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="text-white font-semibold mb-3">Connect</p>
+        <ul class="space-y-2 text-xs">
+          <li>
+            <a href="https://github.com/ysambath11-hub/branch-git" target="_blank" rel="noopener noreferrer"
+              class="hover:text-crimson flex items-center">
+              <i class="fa-brands fa-github mr-2"></i>
+              GitHub Repository
+            </a>
+          </li>
+          <a href="https://www.linkedin.com/in/sambath-y-397a1043a/" target="_blank" rel="noopener noreferrer"
+            class="hover:text-crimson flex items-center">
+            <i class="fa-brands fa-linkedin mr-2"></i>
+            LinkedIn Profile
+          </a>
+          </li>
+          <a href="https://t.me/sambath061107wepc" target="_blank" rel="noopener noreferrer"
+            class="hover:text-crimson flex items-center">
+            <i class="fa-brands fa-telegram mr-2"></i>
+            Telegram Channel
+          </a>
+          </li>
+          <li><a class="fa-solid fa-envelope mr-1"></a>Direct Inquiries</li>
+        </ul>
+      </div>
+      <div>
+        <p class="text-white font-semibold mb-3">Capstone &amp; Credentials</p>
+        <p class="text-xs mb-3">Computer Science and Web Development Capstone Project, evaluated under academic
+          discovery standards.</p>
+        <div class="bg-white/10 rounded-xl px-3 py-2 text-xs"><span class="text-white font-medium">Student
+            Candidate</span><br>Sambath Y — Finalist Portfolio</div>
       </div>
     </div>
-    <div>
-      <p class="text-white font-semibold mb-3">Quick Navigation</p>
-      <ul class="space-y-2 text-xs">
-        <li><a href="index.html" class="hover:text-crimson">Home Overview</a></li>
-        <li><a href="about.html" class="hover:text-crimson">Academic Background</a></li>
-        <li><a href="skills.html" class="hover:text-crimson">Technical Competencies</a></li>
-        <li><a href="projects.html" class="hover:text-crimson">Selected Works</a></li>
-      </ul>
+    <div
+      class="border-t border-white/10 py-5 text-[11px] text-white/40 max-w-6xl mx-auto px-6 flex flex-col sm:flex-row justify-between gap-2">
+      <span>© 2026 Portfolify by Sambath Y. Built for professional and academic recruitment.</span>
+      <span class="flex gap-4"><a href="#" class="hover:text-white">Privacy Policy</a><a href="#"
+          class="hover:text-white">Terms of Service</a><a href="#" class="hover:text-white">Contact Office</a></span>
     </div>
-    <div>
-      <p class="text-white font-semibold mb-3">Connect</p>
-      <ul class="space-y-2 text-xs">
-        <li><i class="fa-brands fa-github mr-1"></i>GitHub Repository</li>
-        <li><i class="fa-brands fa-linkedin mr-1"></i>LinkedIn Profile</li>
-        <li><i class="fa-brands fa-telegram mr-1"></i>Telegram Channel</li>
-        <li><i class="fa-solid fa-envelope mr-1"></i>Direct Inquiries</li>
-      </ul>
-    </div>
-    <div>
-      <p class="text-white font-semibold mb-3">Capstone &amp; Credentials</p>
-      <p class="text-xs mb-3">Computer Science and Web Development Capstone Project, evaluated under academic discovery standards.</p>
-      <div class="bg-white/10 rounded-xl px-3 py-2 text-xs"><span class="text-white font-medium">Student Candidate</span><br>Sambath Y — Finalist Portfolio</div>
-    </div>
-  </div>
-  <div class="border-t border-white/10 py-5 text-[11px] text-white/40 max-w-6xl mx-auto px-6 flex flex-col sm:flex-row justify-between gap-2">
-    <span>© 2026 Portfolify by Sambath Y. Built for professional and academic recruitment.</span>
-    <span class="flex gap-4"><a href="#" class="hover:text-white">Privacy Policy</a><a href="#" class="hover:text-white">Terms of Service</a><a href="#" class="hover:text-white">Contact Office</a></span>
-  </div>
-</footer>
+  </footer>
 
-  <script src="main.js"></script>
+  <script src="js/main.js"></script>
 </body>
 
 </html>

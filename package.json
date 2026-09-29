@@ -23,3 +23,7 @@
     "tailwindcss": "^4.3.3"
   }
 }
+"scripts": {
+  "build:css": "npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --minify",
+  "watch:css": "npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch"
+}
