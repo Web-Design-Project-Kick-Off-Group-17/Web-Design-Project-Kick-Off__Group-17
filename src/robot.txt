@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://student-portfolio-platform-lemon.vercel.app/sitemap.xmlgit 
