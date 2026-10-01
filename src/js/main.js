@@ -373,37 +373,42 @@ function initContactForm() {
       counter.textContent = `${message.value.length} / 500`;
     });
   }
-  form.addEventListener('submit', async (e) => {
+  const form = document.getElementById('form');
+const submitBtn = form.querySelector('button[type="submit"]');
+
+form.addEventListener('submit', async (e) => {
     e.preventDefault();
-    const t = translations[currentLang];
 
-    const data = new FormData(form);
-    data.append('access_key', '1d78de6b-ee00-4ff1-b4cc-05071d9c3297');
-    data.append('subject', `Portfolio contact: ${data.get('category')} (from ${data.get('name')})`);
-    data.append('from_name', 'Portfolio Website');
-    const originalBtn = btn.innerHTML;
-    btn.disabled = true;
-    btn.classList.add('opacity-60', 'cursor-not-allowed');
-    btn.textContent = t.form_sending;
+    const formData = new FormData(form);
+    formData.append("access_key", "1d78de6b-ee00-4ff1-b4cc-05071d9c3297");
+
+    const originalText = submitBtn.textContent;
+
+    submitBtn.textContent = "Sending...";
+    submitBtn.disabled = true;
+
     try {
-      const res = await fetch('https://api.web3forms.com/submit', { method: 'POST', body: data });
-      const json = await res.json();
+        const response = await fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            body: formData
+        });
 
-      if (res.ok && json.success) {
-        showStatus(t.form_success, true);
-        form.reset();
-        if (counter) counter.textContent = '0 / 500';
-      } else {
-        showStatus(t.form_error, false);
-      }
-    } catch (err) {
-      showStatus(t.form_error, false);
+        const data = await response.json();
+
+        if (response.ok) {
+            alert("Success! Your message has been sent.");
+            form.reset();
+        } else {
+            alert("Error: " + data.message);
+        }
+
+    } catch (error) {
+        alert("Something went wrong. Please try again.");
     } finally {
-      btn.disabled = false;
-      btn.classList.remove('opacity-60', 'cursor-not-allowed');
-      btn.innerHTML = originalBtn;
+        submitBtn.textContent = originalText;
+        submitBtn.disabled = false;
     }
-  });
+});
 }
 // ---------- SHARED UI: mobile menu + entrance animation ----------
 function initMobileMenu() {
