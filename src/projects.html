@@ -65,26 +65,51 @@
       <a href="skills.html" class="navlink py-2">Skills</a>
       <a href="projects.html" class="navlink active py-2">Projects</a>
       <a href="contact.html" class="navlink py-2">Contact</a>
+      <div class="lang-dropdown">
+
+          <!-- Selected Language Button -->
+
+          <button id="lang-btn" class="lang-btn" onclick="toggleDropdown()">
+            <img id="current-flag" src="https://flagcdn.com/w40/gb.png" alt="Flag" class="flag-icon" />
+            <span id="current-lang">EN</span>
+            <span class="arrow">▼</span>
+          </button>
+
+          <!-- Dropdown Options -->
+
+          <div id="lang-menu" class="lang-menu hidden">
+            <button onclick="changeLanguage('en', 'EN', 'https://flagcdn.com/w40/gb.png')">
+              <img src="https://flagcdn.com/w40/gb.png" alt="English" class="flag-icon" />
+              <span>English</span>
+            </button>
+            <button onclick="changeLanguage('km', 'ខ្មែរ', 'https://flagcdn.com/w40/kh.png')">
+              <img src="https://flagcdn.com/w40/kh.png" alt="Khmer" class="flag-icon" />
+              <span>ខ្មែរ</span>
+            </button>
+          </div>
+        </div>
     </div>
   </header>
 
   <main class="max-w-6xl mx-auto px-6">
     <div class="pt-10 flex flex-wrap justify-between items-start gap-4 mb-6">
       <div>
-        <p class="text-[11px] font-semibold text-crimson uppercase tracking-wide mb-1">Curated Portfolio · Updated 2026
+        <p class="text-[11px] font-semibold text-crimson uppercase tracking-wide mb-1" data-i18n="Curated_Portfolio" >Curated Portfolio · Updated 2027
         </p>
-        <h1 class="text-3xl md:text-4xl font-bold mb-2">Featured Projects &amp; Case Studies</h1>
-        <p class="text-sm text-granite max-w-lg">Academic capstones, client mockups, and responsive web experiments
-          built with strict attention to semantic structure, accessibility, and clean interface systems.</p>
+        <h1 class="text-3xl md:text-4xl font-bold mb-2" data-i18n="featured_projects_and_case_studies">Featured Projects &amp; Case Studies</h1>
+        <p class="text-sm text-granite max-w-lg" data-i18n="featured_projects_and_case_studies_desc">
+          Academic capstones, client mockups, and responsive web experiments
+          built with strict attention to semantic structure, accessibility, and clean interface systems.
+        </p>
       </div>
       <div class="flex gap-6 text-center">
         <div>
-          <p class="text-2xl font-extrabold text-crimson">06</p>
-          <p class="text-[11px] text-granite">Projects Logged</p>
+          <p class="text-2xl font-extrabold text-crimson" data-i18n="number_06">06</p>
+          <p class="text-[11px] text-granite" data-i18n="Projects_logged">Projects Logged</p>
         </div>
         <div>
-          <p class="text-2xl font-extrabold text-crimson">100%</p>
-          <p class="text-[11px] text-granite">Client Satisfaction</p>
+          <p class="text-2xl font-extrabold text-crimson" data-i18n="100">100%</p>
+          <p class="text-[11px] text-granite" data-i18n="Client_Satisfaction">Client Satisfaction</p>
         </div>
       </div>
     </div>
@@ -97,8 +122,8 @@
           class="w-full bg-white border border-silver/50 rounded-full pl-11 pr-4 py-2.5 text-sm outline-none focus:border-crimson">
       </div>
       <select class="bg-white border border-silver/50 rounded-full px-4 py-2.5 text-sm text-granite outline-none">
-        <option>Latest First (Date)</option>
-        <option>Oldest First</option>
+        <option data-i18n="Lastest_First">Latest First</option>
+        <option data-i18n="Oldest_First">Oldest First</option>
       </select>
     </div>
     <div id="projFilters" class="flex flex-wrap gap-2 mb-8"></div>
@@ -108,12 +133,12 @@
     <div
       class="bg-lavtint rounded-2xl p-9 mb-14 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
       <div>
-        <h2 class="text-2xl font-bold mb-2">Looking for Custom Collaboration?</h2>
-        <p class="text-sm text-granite max-w-md">Soksan is open to alternative front-end design, accessibility work, and
+        <h2 class="text-2xl font-bold mb-2" data-i18n="Looking_for_Custom_Collaboration">Looking for Custom Collaboration?</h2>
+        <p class="text-sm text-granite max-w-md" data-i18n="Custom_Collaboration_Desc">Sambath is open to alternative front-end design, accessibility work, and
           undergraduate research partnerships. Let's build responsive, high-performance web products together.</p>
       </div>
       <a href="contact.html"
-        class="bg-crimson hover:bg-darkcrimson transition-colors text-white px-6 py-3 rounded-full font-semibold text-sm whitespace-nowrap">Get
+        class="bg-crimson hover:bg-darkcrimson transition-colors text-white px-6 py-3 rounded-full font-semibold text-sm whitespace-nowrap" data-i18n="btn_contact">Get
         in Touch →</a>
     </div>
   </main>
@@ -121,7 +146,7 @@
   <footer class="bg-ink text-white/60 mt-8">
     <div class="max-w-6xl mx-auto px-6 py-14 grid sm:grid-cols-2 md:grid-cols-4 gap-10 text-sm">
       <div>
-        <p class="text-white font-bold text-lg mb-3">Portfolio<span class="text-crimson">fy</span></p>
+        <p class="text-white font-bold text-lg mb-3">Portfolio<span class="text-crimson"></span></p>
         <p class="text-xs leading-relaxed mb-4">Curated student engineering portfolio showcasing practical web
           platforms, UI architecture, and modular solutions.</p>
         <div class="flex flex-wrap gap-2">

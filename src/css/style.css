@@ -9,8 +9,7 @@ body {
   content: ''; position: absolute; left: 0; right: 0; bottom: -21px; height: 2px; background: #CE2F5A;
 }
 
-.bar { transform: scaleX(0); transform-origin: left; transition: transform 1s cubic-bezier(.22,1,.36,1); }
-.bar.in { transform: scaleX(1); }
+.bar { transform-origin: left; }
 
 .fade { opacity: 0; transform: translateY(14px); transition: opacity .5s ease, transform .5s ease; }
 .fade.in { opacity: 1; transform: translateY(0); }

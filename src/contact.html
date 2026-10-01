@@ -68,6 +68,29 @@
       <a href="skills.html" class="navlink py-2">Skills</a>
       <a href="projects.html" class="navlink py-2">Projects</a>
       <a href="contact.html" class="navlink active py-2">Contact</a>
+      <div class="lang-dropdown">
+
+          <!-- Selected Language Button -->
+
+          <button id="lang-btn" class="lang-btn" onclick="toggleDropdown()">
+            <img id="current-flag" src="https://flagcdn.com/w40/gb.png" alt="Flag" class="flag-icon" />
+            <span id="current-lang">EN</span>
+            <span class="arrow">▼</span>
+          </button>
+
+          <!-- Dropdown Options -->
+
+          <div id="lang-menu" class="lang-menu hidden">
+            <button onclick="changeLanguage('en', 'EN', 'https://flagcdn.com/w40/gb.png')">
+              <img src="https://flagcdn.com/w40/gb.png" alt="English" class="flag-icon" />
+              <span>English</span>
+            </button>
+            <button onclick="changeLanguage('km', 'ខ្មែរ', 'https://flagcdn.com/w40/kh.png')">
+              <img src="https://flagcdn.com/w40/kh.png" alt="Khmer" class="flag-icon" />
+              <span>ខ្មែរ</span>
+            </button>
+          </div>
+        </div>
     </div>
   </header>
 
@@ -89,7 +112,7 @@
               class="fa-solid fa-envelope"></i></div>
           <div class="flex-1">
             <p class="text-xs text-granite mb-1" data-i18n="email">Institutional Mail</p>
-            <p class="font-semibold text-sm break-all">soksan.sou@fellow.passerellesnumeriques.org</p>
+            <p class="font-semibold text-sm break-all">sambath.y@fellow.passerellesnumeriques.org</p>
             <button class="mt-2 text-[11px] font-semibold bg-lavtint text-slate px-3 py-1 rounded-full hover:bg-lavice"
               data-i18n="copy_address">Copy
               Address</button>
@@ -112,7 +135,7 @@
             <div>
               <p class="text-xs text-granite mb-1" data-i18n="base_of_operations">Base of Operations</p>
               <p class="font-semibold text-sm" data-i18n="location">Phnom Penh, Cambodia</p>
-              <p class="text-xs text-granite" data-i18n="campus_area">Royal University of Phnom Penh Campus Area</p>
+              <p class="text-xs text-granite" data-i18n="campus_area">Passerelles Numériques Cambodia</p>
             </div>
           </div>
           <div class="h-28 rounded-xl bg-lavice flex items-center justify-center text-slate/40"><i
@@ -209,7 +232,7 @@
   <footer class="bg-ink text-white/60 mt-8">
     <div class="max-w-6xl mx-auto px-6 py-14 grid sm:grid-cols-2 md:grid-cols-4 gap-10 text-sm">
       <div>
-        <p class="text-white font-bold text-lg mb-3">Portfolio<span class="text-crimson">fy</span></p>
+        <p class="text-white font-bold text-lg mb-3">Portfolio<span class="text-crimson"></span></p>
         <p class="text-xs leading-relaxed mb-4">Curated student engineering portfolio showcasing practical web
           platforms, UI architecture, and modular solutions.</p>
         <div class="flex flex-wrap gap-2">

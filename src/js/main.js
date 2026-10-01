@@ -329,11 +329,16 @@ function renderSkills() {
     </div>
   `).join('');
 }
-const cats = ['All', 'Web Development', 'UX/UI Design', 'Database & Other'];
+const cats = [
+  { id: 'All', label: 'All' },
+  { id: 'web_development', label: 'Web Development' },
+  { id: 'ux_ui_design', label: 'UX/UI Design' },
+  { id: 'database_other', label: 'Database & Other' }
+];
 let activeCat = 'All';
 function renderFilters() {
-  document.getElementById('projFilters').innerHTML = cats.map(c => `
-    <button data-cat="${c}" class="filterBtn text-xs font-semibold px-4 py-2 rounded-full border transition-colors ${c === activeCat ? 'bg-crimson border-crimson text-white' : 'border-silver text-granite hover:border-crimson hover:text-crimson'}">${c}</button>`).join('');
+  document.getElementById('projFilters').innerHTML = cats.map(({ id, label }) => `
+    <button data-cat="${id}" class="filterBtn text-xs font-semibold px-4 py-2 rounded-full border transition-colors ${id === activeCat ? 'bg-crimson border-crimson text-white' : 'border-silver text-granite hover:border-crimson hover:text-crimson'}">${label}</button>`).join('');
   document.querySelectorAll('.filterBtn').forEach(b => b.addEventListener('click', () => { activeCat = b.dataset.cat; renderFilters(); renderProjectGrid(); }));
 }
 function renderProjectGrid() {
@@ -619,8 +624,31 @@ const translations = {
     Attention_needed: "Attention needed",
     Crrently_reviewing: "Currently reviewing Summer/Fall 2027",
     response_expectation: "Replies typically within 24 hours — Student friendly — Excited forcollaborations &amp; mentorship opportunities.",
+    featured_projects_and_case_studies: "Featured Projects & Case Studies",
+    Curated_Portfolio: "Curated Portfolio . Updated 2027",
+    featured_projects_and_case_studies_desc: "Academic capstones, client mockups, and responsive web experiments built with strict attention to semantic structure, accessibility, and clean interface systems.",
+    Projects_logged: "Projects Logged",
+    number_06: "06",
+    100 :"100%",
+    Client_Satisfaction: "Client Satisfaction",
+    Lastest_First: "Latest First",
+    Oldest_First: "Oldest First",
+    Looking_for_Custom_Collaboration: "Looking for Custom Collaboration?",
+    Custom_Collaboration_Desc: "Sambath is open to alternative front-end design, accessibility work, and undergraduate research partnerships. Let's build responsive, high-performance web products together."
   },
   km: {
+    Looking_for_Custom_Collaboration: "កំពុងស្វែងរកការសហការផ្ទាល់ខ្លួន?",
+    Custom_Collaboration_Desc: "សម្បត្តិ គឺមានភាពបើកចំហសម្រាប់ការរចនាផ្នែកមុខផ្សេងទៀត ការងារចូលប្រើបាន និងដៃគូស្រាវជ្រាវថ្នាក់បរិញ្ញាបត្រទាប។ យើងមកសាងសង់ផលិតផលបណ្តាញដែលមានប្រសិទ្ធភាពខ្ពស់ និងឆ្លាតវៃជាមួយគ្នា។",
+    Lastest_First: "ថ្មីបំផុតជាមុន",
+    Oldest_First: "ចាស់បំផុតជាមុន",
+    Projects_logged: "គម្រោងបានចុះបញ្ជី",
+    number_06: "០៦",
+    100 :"១០០%",
+    Client_Satisfaction: "ការពេញចិត្តរបស់អតិថិជន",
+    nav_home: "ទំព័រដើម",
+    featured_projects_and_case_studies_desc: "គម្រោងសិក្សាផ្នែកអប់រំ ការបង្ហាញពីអតិថិជន និងការប្រកួតប្រជែងបណ្តាញដែលមានការអនុវត្តដោយយកចិត្តទុកដាក់លើរចនាសម្ព័ន្ធសមាសធាតុ សមត្ថភាពក្នុងការចូលប្រើ និងប្រព័ន្ធចំណុចប្រទាក់ស្អាត។",
+    Curated_Portfolio: "ប្រវត្តិរូបដែលបានរៀបចំ . បានធ្វើបច្ចុប្បន្នភាព ២០២៧",
+    featured_projects_and_case_studies: "គម្រោង និង ករណីសិក្សា",
     Crrently_reviewing: "កំពុងពិនិត្យមើលរដូវក្តៅ/រដូវស្លឹកឈើជ្រុះ ២០២៧",
     response_expectation: "ការឆ្លើយតបជាទូទៅក្នុងរយៈពេល ២៤ ម៉ោង - សិស្សមិត្តភាព - រំភើបចំពោះការសហការនិងឱកាសណែនាំ។",
     Attention_needed: "ត្រូវការយកចិត្តទុកដាក់",
