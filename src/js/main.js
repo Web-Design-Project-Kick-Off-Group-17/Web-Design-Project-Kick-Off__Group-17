@@ -378,7 +378,7 @@ function initContactForm() {
     const t = translations[currentLang];
 
     const data = new FormData(form);
-    data.append('access_key', 'd6d6ffe4-5f0c-4117-aaa6-5513e1810459');
+    data.append('access_key', '1d78de6b-ee00-4ff1-b4cc-05071d9c3297');
     data.append('subject', `Portfolio contact: ${data.get('category')} (from ${data.get('name')})`);
     data.append('from_name', 'Portfolio Website');
     const originalBtn = btn.innerHTML;
