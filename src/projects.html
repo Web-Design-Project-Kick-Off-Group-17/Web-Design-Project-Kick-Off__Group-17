@@ -5,6 +5,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Student Portfolio Platform</title>
+
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="icon" type="image/x-icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="48x48" href="favicon-48.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="favicon.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -50,8 +57,8 @@
         </div>
       </nav>
       <div class="flex items-center gap-3">
-        <a href="contact.html"
-          class="hidden sm:inline-block text-crimson font-semibold text-sm hover:text-darkcrimson" data-i18n="contact_title">Get in Touch</a>
+        <a href="contact.html" class="hidden sm:inline-block text-crimson font-semibold text-sm hover:text-darkcrimson"
+          data-i18n="contact_title">Get in Touch</a>
         <img class="w-9 h-9 rounded-full bg-gradient-to-br from-crimson to-maroon"
           src="picture/photo_2026-09-25_11-21-27.jpg"></img>
         <button id="menuBtn" class="md:hidden w-8 h-8 flex flex-col justify-center gap-1"><span
@@ -67,36 +74,38 @@
       <a href="contact.html" class="navlink py-2">Contact</a>
       <div class="lang-dropdown">
 
-          <!-- Selected Language Button -->
+        <!-- Selected Language Button -->
 
-          <button id="lang-btn" class="lang-btn" onclick="toggleDropdown()">
-            <img id="current-flag" src="https://flagcdn.com/w40/gb.png" alt="Flag" class="flag-icon" />
-            <span id="current-lang">EN</span>
-            <span class="arrow">▼</span>
+        <button id="lang-btn" class="lang-btn" onclick="toggleDropdown()">
+          <img id="current-flag" src="https://flagcdn.com/w40/gb.png" alt="Flag" class="flag-icon" />
+          <span id="current-lang">EN</span>
+          <span class="arrow">▼</span>
+        </button>
+
+        <!-- Dropdown Options -->
+
+        <div id="lang-menu" class="lang-menu hidden">
+          <button onclick="changeLanguage('en', 'EN', 'https://flagcdn.com/w40/gb.png')">
+            <img src="https://flagcdn.com/w40/gb.png" alt="English" class="flag-icon" />
+            <span>English</span>
           </button>
-
-          <!-- Dropdown Options -->
-
-          <div id="lang-menu" class="lang-menu hidden">
-            <button onclick="changeLanguage('en', 'EN', 'https://flagcdn.com/w40/gb.png')">
-              <img src="https://flagcdn.com/w40/gb.png" alt="English" class="flag-icon" />
-              <span>English</span>
-            </button>
-            <button onclick="changeLanguage('km', 'ខ្មែរ', 'https://flagcdn.com/w40/kh.png')">
-              <img src="https://flagcdn.com/w40/kh.png" alt="Khmer" class="flag-icon" />
-              <span>ខ្មែរ</span>
-            </button>
-          </div>
+          <button onclick="changeLanguage('km', 'ខ្មែរ', 'https://flagcdn.com/w40/kh.png')">
+            <img src="https://flagcdn.com/w40/kh.png" alt="Khmer" class="flag-icon" />
+            <span>ខ្មែរ</span>
+          </button>
         </div>
+      </div>
     </div>
   </header>
 
   <main class="max-w-6xl mx-auto px-6">
     <div class="pt-10 flex flex-wrap justify-between items-start gap-4 mb-6">
       <div>
-        <p class="text-[11px] font-semibold text-crimson uppercase tracking-wide mb-1" data-i18n="Curated_Portfolio" >Curated Portfolio · Updated 2027
+        <p class="text-[11px] font-semibold text-crimson uppercase tracking-wide mb-1" data-i18n="Curated_Portfolio">
+          Curated Portfolio · Updated 2027
         </p>
-        <h1 class="text-3xl md:text-4xl font-bold mb-2" data-i18n="featured_projects_and_case_studies">Featured Projects &amp; Case Studies</h1>
+        <h1 class="text-3xl md:text-4xl font-bold mb-2" data-i18n="featured_projects_and_case_studies">Featured Projects
+          &amp; Case Studies</h1>
         <p class="text-sm text-granite max-w-lg" data-i18n="featured_projects_and_case_studies_desc">
           Academic capstones, client mockups, and responsive web experiments
           built with strict attention to semantic structure, accessibility, and clean interface systems.
@@ -133,12 +142,15 @@
     <div
       class="bg-lavtint rounded-2xl p-9 mb-14 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
       <div>
-        <h2 class="text-2xl font-bold mb-2" data-i18n="Looking_for_Custom_Collaboration">Looking for Custom Collaboration?</h2>
-        <p class="text-sm text-granite max-w-md" data-i18n="Custom_Collaboration_Desc">Sambath is open to alternative front-end design, accessibility work, and
+        <h2 class="text-2xl font-bold mb-2" data-i18n="Looking_for_Custom_Collaboration">Looking for Custom
+          Collaboration?</h2>
+        <p class="text-sm text-granite max-w-md" data-i18n="Custom_Collaboration_Desc">Sambath is open to alternative
+          front-end design, accessibility work, and
           undergraduate research partnerships. Let's build responsive, high-performance web products together.</p>
       </div>
       <a href="contact.html"
-        class="bg-crimson hover:bg-darkcrimson transition-colors text-white px-6 py-3 rounded-full font-semibold text-sm whitespace-nowrap" data-i18n="btn_contact">Get
+        class="bg-crimson hover:bg-darkcrimson transition-colors text-white px-6 py-3 rounded-full font-semibold text-sm whitespace-nowrap"
+        data-i18n="btn_contact">Get
         in Touch →</a>
     </div>
   </main>

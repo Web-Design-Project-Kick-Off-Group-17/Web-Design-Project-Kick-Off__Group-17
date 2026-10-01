@@ -5,6 +5,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Student Portfolio Platform</title>
+
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="icon" type="image/x-icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="48x48" href="favicon-48.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="favicon.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="stylesheet" href="output.css">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,7 +34,7 @@
         <a href="skills.html" data-i18n="nav_skills" class="navlink hover:text-crimson transition-colors">Skills</a>
         <a href="projects.html" data-i18n="nav_projects"
           class="navlink hover:text-crimson transition-colors">Projects</a>
-        <a href="contact.html" data-i18n="nav_contact" class="navlink hover:text-crimson transition-colors">Contact</a>  
+        <a href="contact.html" data-i18n="nav_contact" class="navlink hover:text-crimson transition-colors">Contact</a>
         <div class="lang-dropdown">
 
           <!-- Selected Language Button -->
@@ -53,8 +60,7 @@
         </div>
       </nav>
       <div class="flex items-center gap-3">
-        <a href="contact.html"
-          data-i18n="contact_me"
+        <a href="contact.html" data-i18n="contact_me"
           class="hidden sm:inline-block text-crimson font-semibold text-sm hover:text-darkcrimson">Get in Touch</a>
         <div class="w-9 h-9 rounded-full bg-gradient-to-br from-crimson to-maroon"> <img
             class="w-9 h-9 rounded-full bg-gradient-to-br" src="picture/photo_2026-09-25_11-21-27.jpg" alt=""></div>
@@ -71,41 +77,42 @@
       <a href="contact.html" data-i18n="nav_contact" class="navlink py-2">Contact</a>
       <div class="lang-dropdown">
 
-          <!-- Selected Language Button -->
+        <!-- Selected Language Button -->
 
-          <button id="lang-btn" class="lang-btn" onclick="toggleDropdown()">
-            <img id="current-flag" src="https://flagcdn.com/w40/gb.png" alt="Flag" class="flag-icon" />
-            <span id="current-lang">EN</span>
-            <span class="arrow">▼</span>
+        <button id="lang-btn" class="lang-btn" onclick="toggleDropdown()">
+          <img id="current-flag" src="https://flagcdn.com/w40/gb.png" alt="Flag" class="flag-icon" />
+          <span id="current-lang">EN</span>
+          <span class="arrow">▼</span>
+        </button>
+
+        <!-- Dropdown Options -->
+
+        <div id="lang-menu" class="lang-menu hidden">
+          <button onclick="changeLanguage('en', 'EN', 'https://flagcdn.com/w40/gb.png')">
+            <img src="https://flagcdn.com/w40/gb.png" alt="English" class="flag-icon" />
+            <span>English</span>
           </button>
-
-          <!-- Dropdown Options -->
-
-          <div id="lang-menu" class="lang-menu hidden">
-            <button onclick="changeLanguage('en', 'EN', 'https://flagcdn.com/w40/gb.png')">
-              <img src="https://flagcdn.com/w40/gb.png" alt="English" class="flag-icon" />
-              <span>English</span>
-            </button>
-            <button onclick="changeLanguage('km', 'ខ្មែរ', 'https://flagcdn.com/w40/kh.png')">
-              <img src="https://flagcdn.com/w40/kh.png" alt="Khmer" class="flag-icon" />
-              <span>ខ្មែរ</span>
-            </button>
-          </div>
+          <button onclick="changeLanguage('km', 'ខ្មែរ', 'https://flagcdn.com/w40/kh.png')">
+            <img src="https://flagcdn.com/w40/kh.png" alt="Khmer" class="flag-icon" />
+            <span>ខ្មែរ</span>
+          </button>
         </div>
+      </div>
     </div>
   </header>
 
   <main class="max-w-6xl mx-auto px-6">
     <div class="pt-10 flex flex-wrap justify-between items-start gap-3 mb-8">
       <div>
-        <p class="text-[11px] font-semibold text-crimson uppercase tracking-wide mb-1" data-i18n="Student_Portfolio_Education">
+        <p class="text-[11px] font-semibold text-crimson uppercase tracking-wide mb-1"
+          data-i18n="Student_Portfolio_Education">
           Student Profile &amp; Education
         </p>
         <h1 data-i18n="Academic_Projects" class="text-3xl md:text-4xl font-bold">Academic Journey &amp; Background</h1>
       </div>
-      <span class="text-[11px] font-semibold bg-lavtint text-slate px-3 py-1.5 rounded-full"><i 
-
-          class="fa-solid fa-shield-halved text-crimson mr-1"></i data-i18n="Verified_Projects">Verified Engineering Student — CS Dept.</span>
+      <span class="text-[11px] font-semibold bg-lavtint text-slate px-3 py-1.5 rounded-full"><i
+          class="fa-solid fa-shield-halved text-crimson mr-1"></i data-i18n="Verified_Projects">Verified Engineering
+        Student — CS Dept.</span>
     </div>
 
     <div class="grid md:grid-cols-5 gap-6 mb-14">
@@ -116,27 +123,35 @@
           <h2 data-i18n="name" class="text-lg font-bold">Sambath Y</h2>
           </h2>
           <p class="text-sm text-granite mb-2">Frontend Engineer</p>
-          <span class="inline-block text-[10px] font-semibold bg-lavtint text-slate px-2.5 py-1 rounded-full mb-4" data-i18n="intern_2027">2027
+          <span class="inline-block text-[10px] font-semibold bg-lavtint text-slate px-2.5 py-1 rounded-full mb-4"
+            data-i18n="intern_2027">2027
             Internship</span>
-          <p data-i18n="commitment" class="text-sm text-granite italic leading-relaxed mb-5">"I believe the standout moments in technology
+          <p data-i18n="commitment" class="text-sm text-granite italic leading-relaxed mb-5">"I believe the standout
+            moments in technology
             occur where engineered performance meets tactile, delightful interaction. Currently based in Phnom Penh, I
             immerse myself in turning complex layouts into seamless, accessible web applications."</p>
           <div class="space-y-2 text-sm mb-5">
-            <div class="flex justify-between border-b border-silver/30 pb-2"><span class="text-granite" data-i18n="base_location" data>Base
+            <div class="flex justify-between border-b border-silver/30 pb-2"><span class="text-granite"
+                data-i18n="base_location" data>Base
                 location</span><span class="font-medium" data-i18n="location">Phnom Penh, Cambodia</span></div>
-            <div class="flex justify-between border-b border-silver/30 pb-2"><span class="text-granite" data-i18n="Academic_program">Academic
-                program</span><span class="font-medium" data-i18n="B_S_Computer_Science">B.S. Computer Science</span></div>
-            <div class="flex justify-between"><span class="text-granite" data-i18n="Availability">Availability</span><span
-                class="font-medium text-irish" data-i18n="Open_for_Internships">Open, Internship</span></div>
+            <div class="flex justify-between border-b border-silver/30 pb-2"><span class="text-granite"
+                data-i18n="Academic_program">Academic
+                program</span><span class="font-medium" data-i18n="B_S_Computer_Science">B.S. Computer Science</span>
+            </div>
+            <div class="flex justify-between"><span class="text-granite"
+                data-i18n="Availability">Availability</span><span class="font-medium text-irish"
+                data-i18n="Open_for_Internships">Open, Internship</span></div>
           </div>
           <a href="asset/Sambath_Y_CV_fixed.pdf" download="Sambath Y.pdf"
             class="w-full bg-crimson hover:bg-darkcrimson transition-colors text-white text-sm font-semibold py-3 rounded-full inline-flex items-center justify-center"><i
               class="fa-solid fa-download mr-1 px-5"></i data-i18n="Download_CV"> Download Resume</a>
         </div>
         <div class="bg-lavtint rounded-2xl p-5">
-          <p class="text-[11px] font-semibold uppercase tracking-wide text-slate mb-1" data-i18n="Academic_standind">Academic Standing</p>
+          <p class="text-[11px] font-semibold uppercase tracking-wide text-slate mb-1" data-i18n="Academic_standind">
+            Academic Standing</p>
           <p class="font-bold text-ink text-sm" data-i18n="Honor_Student_Candidate">Honor Student Candidate</p>
-          <p class="text-xs text-granite mt-1" data-i18n="Consistent_top_tire_semeter_achievement">Consistent top-tier semester achievement</p>
+          <p class="text-xs text-granite mt-1" data-i18n="Consistent_top_tire_semeter_achievement">Consistent top-tier
+            semester achievement</p>
         </div>
       </div>
 
@@ -144,10 +159,12 @@
         <div class="bg-white border border-silver/40 rounded-2xl p-6 shadow-sm">
           <div class="flex justify-between items-start mb-3">
             <div>
-              <p class="text-[11px] font-semibold text-crimson uppercase tracking-wide mb-1" data-i18n="Institution">Institution &amp; Education
+              <p class="text-[11px] font-semibold text-crimson uppercase tracking-wide mb-1" data-i18n="Institution">
+                Institution &amp; Education
               </p>
               <h2 class="font-bold text-lg">Passerellesnumréiques Cambodia</h2>
-              <p class="text-xs text-granite" data-i18n="training">Passerelles Numériques has implemented an innovative and comprehensive
+              <p class="text-xs text-granite" data-i18n="training">Passerelles Numériques has implemented an innovative
+                and comprehensive
                 training
                 program in each of its centers, focused on long-term employability.</p>
             </div>
@@ -155,15 +172,17 @@
           </div>
           <div class="grid sm:grid-cols-2 gap-4 mt-4">
             <div class="bg-lavtint rounded-xl p-4">
-              <p class="text-[11px] font-semibold text-slate mb-1"><i
-                  class="fa-solid fa-award text-crimson mr-1" data-i18n="Hornor_recognition" ></i>Honor Recognition</p>
-              <p class="text-xs text-granite" data-i18n="recognition_desc">Recognized for academic performance and peer mentorship across semesters.
+              <p class="text-[11px] font-semibold text-slate mb-1"><i class="fa-solid fa-award text-crimson mr-1"
+                  data-i18n="Hornor_recognition"></i>Honor Recognition</p>
+              <p class="text-xs text-granite" data-i18n="recognition_desc">Recognized for academic performance and peer
+                mentorship across semesters.
               </p>
             </div>
             <div class="bg-lavtint rounded-xl p-4">
-              <p class="text-[11px] font-semibold text-slate mb-1"><i
-                  class="fa-solid fa-layer-group text-crimson mr-1" data-i18n="Core_Curriculum"></i>Core Curriculum</p>
-              <p class="text-xs text-granite" data-i18n="Core_Curriculum_Desc" >Data Structures, Algorithms, Database Systems Architecture.</p>
+              <p class="text-[11px] font-semibold text-slate mb-1"><i class="fa-solid fa-layer-group text-crimson mr-1"
+                  data-i18n="Core_Curriculum"></i>Core Curriculum</p>
+              <p class="text-xs text-granite" data-i18n="Core_Curriculum_Desc">Data Structures, Algorithms, Database
+                Systems Architecture.</p>
             </div>
           </div>
         </div>
@@ -182,7 +201,8 @@
         <div class="bg-white border border-silver/40 rounded-2xl p-6 shadow-sm">
           <p class="text-[11px] font-semibold text-crimson uppercase tracking-wide mb-3">Beyond the Code</p>
           <p class="font-bold mb-4" data-i18n="Couriosities_Hobby">Curiosities &amp; Hobbies</p>
-           <p class="text-xs text-granite mb-5" data-i18n="hobby_desc"> Exploring interests beyond coding, from digital art to community engagement, reflecting a well-rounded approach to personal and professional growth.</p>  
+          <p class="text-xs text-granite mb-5" data-i18n="hobby_desc"> Exploring interests beyond coding, from digital
+            art to community engagement, reflecting a well-rounded approach to personal and professional growth.</p>
           <div id="hobbies" class="flex flex-wrap gap-2"></div>
         </div>
       </div>

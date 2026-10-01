@@ -5,6 +5,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Student Portfolio Platform</title>
+
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="icon" type="image/x-icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="48x48" href="favicon-48.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="favicon.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -70,27 +77,27 @@
       <a href="contact.html" class="navlink active py-2">Contact</a>
       <div class="lang-dropdown">
 
-          <!-- Selected Language Button -->
+        <!-- Selected Language Button -->
 
-          <button id="lang-btn" class="lang-btn" onclick="toggleDropdown()">
-            <img id="current-flag" src="https://flagcdn.com/w40/gb.png" alt="Flag" class="flag-icon" />
-            <span id="current-lang">EN</span>
-            <span class="arrow">▼</span>
+        <button id="lang-btn" class="lang-btn" onclick="toggleDropdown()">
+          <img id="current-flag" src="https://flagcdn.com/w40/gb.png" alt="Flag" class="flag-icon" />
+          <span id="current-lang">EN</span>
+          <span class="arrow">▼</span>
+        </button>
+
+        <!-- Dropdown Options -->
+
+        <div id="lang-menu" class="lang-menu hidden">
+          <button onclick="changeLanguage('en', 'EN', 'https://flagcdn.com/w40/gb.png')">
+            <img src="https://flagcdn.com/w40/gb.png" alt="English" class="flag-icon" />
+            <span>English</span>
           </button>
-
-          <!-- Dropdown Options -->
-
-          <div id="lang-menu" class="lang-menu hidden">
-            <button onclick="changeLanguage('en', 'EN', 'https://flagcdn.com/w40/gb.png')">
-              <img src="https://flagcdn.com/w40/gb.png" alt="English" class="flag-icon" />
-              <span>English</span>
-            </button>
-            <button onclick="changeLanguage('km', 'ខ្មែរ', 'https://flagcdn.com/w40/kh.png')">
-              <img src="https://flagcdn.com/w40/kh.png" alt="Khmer" class="flag-icon" />
-              <span>ខ្មែរ</span>
-            </button>
-          </div>
+          <button onclick="changeLanguage('km', 'ខ្មែរ', 'https://flagcdn.com/w40/kh.png')">
+            <img src="https://flagcdn.com/w40/kh.png" alt="Khmer" class="flag-icon" />
+            <span>ខ្មែរ</span>
+          </button>
         </div>
+      </div>
     </div>
   </header>
 
@@ -144,7 +151,8 @@
         <div class="bg-white border border-silver/40 rounded-2xl p-5 shadow-sm">
           <p class="text-xs font-semibold mb-1"><i class="fa-regular fa-clock text-crimson mr-1"></i>Response
             Expectation</p>
-          <p class="text-xs text-granite mb-2" data-i18n="response_expectation_desc">Replies typically within 24 hours — Student friendly — Excited for
+          <p class="text-xs text-granite mb-2" data-i18n="response_expectation_desc">Replies typically within 24 hours —
+            Student friendly — Excited for
             collaborations &amp; mentorship opportunities.</p>
           <span class="text-[11px] font-semibold text-irish"><span
               class="inline-block w-2 h-2 rounded-full bg-irish mr-1"></span>Currently reviewing Summer/Fall 2027
@@ -186,7 +194,7 @@
             class="fa-solid fa-triangle-exclamation mr-1"></i><strong data-i18n="Attention_needed">Attention
             needed</strong> — please review the
           highlighted fields below before submitting your dispatch.</div>
-        <form id="contactForm" class="space-y-4" >
+        <form id="contactForm" class="space-y-4">
           <input type="checkbox" name="botcheck" class="hidden" tabindex="-1" autocomplete="off" style="display:none">
           <div><label data-i18n="full_name" class="text-xs font-semibold text-slate mb-1 block">Full Name
               *</label><input required name="name" type="text"
@@ -217,7 +225,8 @@
           <button id="submitBtn" type="submit" data-i18n="send_message"
             class="w-full bg-crimson hover:bg-darkcrimson transition-colors text-white font-semibold text-sm py-3 rounded-full">Send
             Message <i class="fa-solid fa-paper-plane ml-1"></i></button>
-          <p id="formStatus" role="status" aria-live="polite" class="text-center text-xs opacity-0 transition-opacity"></p>
+          <p id="formStatus" role="status" aria-live="polite" class="text-center text-xs opacity-0 transition-opacity">
+          </p>
           <p class="text-center text-[11px] text-granite"><i class="fa-solid fa-lock mr-1"></i>Your data is strictly
             used for portfolio correspondence. No spam.</p>
         </form>

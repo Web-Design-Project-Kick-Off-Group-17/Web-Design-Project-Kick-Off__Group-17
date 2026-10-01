@@ -5,6 +5,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Student Portfolio Platform</title>
+
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="icon" type="image/x-icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="48x48" href="favicon-48.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="favicon.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -57,7 +64,7 @@
       <div class="flex items-center gap-3">
         <a href="contact.html" data-i18n="get_in_touch"
           class="hidden sm:inline-block text-crimson font-semibold text-sm hover:text-darkcrimson">Get in Touch</a>
-        
+
         <div class="w-9 h-9 rounded-full bg-gradient-to-br from-crimson to-maroon"><img class="rounded-full w-9 h-9"
             src="picture/photo_2026-09-25_11-21-27.jpg" alt="Sambath Y"></div>
         <button id="menuBtn" class="md:hidden w-8 h-8 flex flex-col justify-center gap-1"><span
@@ -73,27 +80,27 @@
       <a href="contact.html" data-i18n="nav_contact" class="navlink py-2">Contact</a>
       <div class="lang-dropdown">
 
-          <!-- Selected Language Button -->
+        <!-- Selected Language Button -->
 
-          <button id="lang-btn" class="lang-btn" onclick="toggleDropdown()">
-            <img id="current-flag" src="https://flagcdn.com/w40/gb.png" alt="Flag" class="flag-icon" />
-            <span id="current-lang">EN</span>
-            <span class="arrow">▼</span>
+        <button id="lang-btn" class="lang-btn" onclick="toggleDropdown()">
+          <img id="current-flag" src="https://flagcdn.com/w40/gb.png" alt="Flag" class="flag-icon" />
+          <span id="current-lang">EN</span>
+          <span class="arrow">▼</span>
+        </button>
+
+        <!-- Dropdown Options -->
+
+        <div id="lang-menu" class="lang-menu hidden">
+          <button onclick="changeLanguage('en', 'EN', 'https://flagcdn.com/w40/gb.png')">
+            <img src="https://flagcdn.com/w40/gb.png" alt="English" class="flag-icon" />
+            <span>English</span>
           </button>
-
-          <!-- Dropdown Options -->
-
-          <div id="lang-menu" class="lang-menu hidden">
-            <button onclick="changeLanguage('en', 'EN', 'https://flagcdn.com/w40/gb.png')">
-              <img src="https://flagcdn.com/w40/gb.png" alt="English" class="flag-icon" />
-              <span>English</span>
-            </button>
-            <button onclick="changeLanguage('km', 'ខ្មែរ', 'https://flagcdn.com/w40/kh.png')">
-              <img src="https://flagcdn.com/w40/kh.png" alt="Khmer" class="flag-icon" />
-              <span>ខ្មែរ</span>
-            </button>
-          </div>
+          <button onclick="changeLanguage('km', 'ខ្មែរ', 'https://flagcdn.com/w40/kh.png')">
+            <img src="https://flagcdn.com/w40/kh.png" alt="Khmer" class="flag-icon" />
+            <span>ខ្មែរ</span>
+          </button>
         </div>
+      </div>
     </div>
   </header>
 
@@ -105,18 +112,18 @@
       <span data-i18n="hero_role"
         class="inline-block text-[11px] font-semibold uppercase tracking-wide bg-lavtint text-slate px-3 py-1.5 rounded-full mb-5">Senior
         Web Development · CS Engineer</span>
-      <h1 data-i18n="build_modern" class="text-[34px] md:text-[48px] font-extrabold leading-tight">Building Modern web Experiencess<span data-i18n="hero_role" class="text-crimson">Web
+      <h1 data-i18n="build_modern" class="text-[34px] md:text-[48px] font-extrabold leading-tight">Building Modern web
+        Experiencess<span data-i18n="hero_role" class="text-crimson">Web
           Experiences</span> with Code &amp; Passion.</h1>
-      <p data-i18n="hero_desc" class="mt-5 text-granite text-[15px] leading-relaxed">I am a passionate Web Development student who enjoys
+      <p data-i18n="hero_desc" class="mt-5 text-granite text-[15px] leading-relaxed">I am a passionate Web Development
+        student who enjoys
         learning new technologies, building accessible websites, and engineering scalable technical skills. Focused on
         user-first digital engineering and clean modular software architecture.</p>
       <div class="mt-7 flex flex-wrap justify-center gap-4">
-        <a href="projects.html"
-                data-i18n="view_projects"
+        <a href="projects.html" data-i18n="view_projects"
           class="bg-crimson hover:bg-darkcrimson transition-colors text-white text-sm font-semibold px-6 py-3 rounded-full">View
           My Projects <i class="fa-solid fa-arrow-right ml-1"></i></a>
-        <a href="contact.html"
-          data-i18n="contact_me"
+        <a href="contact.html" data-i18n="contact_me"
           class="border border-silver hover:border-crimson hover:text-crimson transition-colors text-sm font-semibold px-6 py-3 rounded-full">Contact
           Me</a>
       </div>
@@ -132,7 +139,8 @@
     <div class="bg-white border border-silver/40 rounded-2xl p-7 mb-12 shadow-sm fade">
       <div class="flex justify-between items-start mb-6">
         <div>
-          <p class="text-[11px] font-semibold text-crimson uppercase tracking-wide mb-1" data-i18n="technical_Proficiency">Technical Proficiency</p>
+          <p class="text-[11px] font-semibold text-crimson uppercase tracking-wide mb-1"
+            data-i18n="technical_Proficiency">Technical Proficiency</p>
           <h2 class="text-xl font-bold" data-i18n="core_engineering_stack">Core Engineering Stack</h2>
         </div>
         <span class="text-xs text-granite">Updated 2026</span>
@@ -145,10 +153,12 @@
     <div class="mb-10">
       <div class="flex flex-wrap justify-between items-end gap-3 mb-6 fade">
         <div>
-          <p class="text-[11px] font-semibold text-crimson uppercase tracking-wide mb-1" data-i18n="selected_work">Selected Work</p>
+          <p class="text-[11px] font-semibold text-crimson uppercase tracking-wide mb-1" data-i18n="selected_work">
+            Selected Work</p>
           <h2 class="text-2xl font-bold" data-i18n="featured_projects">Featured Engineering Projects</h2>
         </div>
-        <a href="projects.html" class="text-crimson text-sm font-semibold hover:text-darkcrimson" data-i18n="explore_projects">Explore All Projects
+        <a href="projects.html" class="text-crimson text-sm font-semibold hover:text-darkcrimson"
+          data-i18n="explore_projects">Explore All Projects
           →</a>
       </div>
       <div id="homeProjects" class="grid md:grid-cols-3 gap-6 fade"></div>
@@ -157,22 +167,22 @@
     <div
       class="bg-ink text-white rounded-2xl p-9 mb-14 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 fade">
       <div>
-        <span
-          data-i18n="Open_for_Internships"
+        <span data-i18n="Open_for_Internships"
           class="inline-block text-[10px] font-semibold uppercase tracking-wide bg-white/10 px-3 py-1 rounded-full mb-3">Open
           for Internship 2027</span>
-        <h2 data-i18n="let_colaborate" class="text-2xl md:text-3xl font-bold mb-2">Let's collaborate on your next project.</h2>
-        <p class="text-white/60 text-sm max-w-md" data-i18n="internship_desc">I'm actively seeking junior frontend engineering roles, web
+        <h2 data-i18n="let_colaborate" class="text-2xl md:text-3xl font-bold mb-2">Let's collaborate on your next
+          project.</h2>
+        <p class="text-white/60 text-sm max-w-md" data-i18n="internship_desc">I'm actively seeking junior frontend
+          engineering roles, web
           development internships, and open collaborative engineering opportunities.</p>
       </div>
-      <a href="contact.html"
-        data-i18n="get_in_touch"
+      <a href="contact.html" data-i18n="get_in_touch"
         class="bg-crimson hover:bg-darkcrimson transition-colors px-6 py-3 rounded-full font-semibold text-sm whitespace-nowrap">Get
         in Touch</a>
     </div>
   </main>
 
-  
+
   <footer class="bg-ink text-white/60 mt-8">
     <div class="max-w-6xl mx-auto px-6 py-14 grid sm:grid-cols-2 md:grid-cols-4 gap-10 text-sm">
       <div>

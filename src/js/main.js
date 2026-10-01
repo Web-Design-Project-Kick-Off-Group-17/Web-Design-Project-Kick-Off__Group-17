@@ -68,22 +68,22 @@ const projects = [
 const timeline = [
   {
     y: '2023',
-    t: 'milestone_2023_title',
-    d: 'milestone_2023_desc',
+    t: 'milestone_2026_title',
+    d: 'milestone_2026_desc',
     tags: [],
     tag2: ''
   },
   {
     y: '2024',
-    t: 'milestone_2024_title',
-    d: 'milestone_2024_desc',
+    t: 'milestone_2026_title',
+    d: 'milestone_2026_desc',
     tags: ['ES6+', 'Modern CSS', 'Fluid CSS Architecture'],
     tag2: ''
   },
   {
     y: '2025',
-    t: 'milestone_2025_title',
-    d: 'milestone_2025_desc',
+    t: 'milestone_2026_title',
+    d: 'milestone_2026_desc',
     tags: ['TypeScript', 'React', 'Tailwind CSS'],
     tag2: 'in_progress',
     hl: true
@@ -188,7 +188,7 @@ function renderHome() {
   const statsEl = document.getElementById('homeStats');
   if (!statsEl) return;
   statsEl.innerHTML = `
-    <div class="bg-white border border-silver/40 rounded-2xl p-5 flex gap-4 items-center shadow-sm"><div class="w-11 h-11 rounded-xl bg-lavtint flex items-center justify-center text-crimson"><i class="fa-solid fa-star"></i></div><div><p class="text-xl font-extrabold">3.85</p><p class="text-xs text-granite">GPA · Dean's Honor List, Royal University of Phnom Penh</p></div></div>
+    <div class="bg-white border border-silver/40 rounded-2xl p-5 flex gap-4 items-center shadow-sm"><div class="w-11 h-11 rounded-xl bg-lavtint flex items-center justify-center text-crimson"><i class="fa-solid fa-star"></i></div><div><p class="text-xl font-extrabold">3.85</p><p class="text-xs text-granite">GPA · Dean's Honor List, Passerelles Numérique Cambodia </p></div></div>
     <div class="bg-white border border-silver/40 rounded-2xl p-5 flex gap-4 items-center shadow-sm"><div class="w-11 h-11 rounded-xl bg-lavtint flex items-center justify-center text-crimson"><i class="fa-solid fa-diagram-project"></i></div><div><p class="text-xl font-extrabold">12+</p><p class="text-xs text-granite">Completed Projects · Personal &amp; internship mockups</p></div></div>
     <div class="bg-white border border-silver/40 rounded-2xl p-5 flex gap-4 items-center shadow-sm"><div class="w-11 h-11 rounded-xl bg-lavtint flex items-center justify-center text-crimson"><i class="fa-solid fa-award"></i></div><div><p class="text-xl font-extrabold">4</p><p class="text-xs text-granite">Certifications · Web standards &amp; UI/UX foundations</p></div></div>`;
 
